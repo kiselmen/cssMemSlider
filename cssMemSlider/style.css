@@ -20,6 +20,7 @@ html {
 body{
     background-color: #292931;
 }
+
 .container{
     margin: 0 auto;
     width: 100%;
@@ -32,7 +33,7 @@ body{
 
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+        justify-content: flex-start;
     align-content: space-between;
 }
 
@@ -49,10 +50,14 @@ body{
 
 .slide{
     height: 100%;
-    width: 0;
+    width: 0%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition: transform ease-in-out .5s;
+    -webkit-transition: transform ease-in-out .5s;    
 }
 
 .item1 { background-image: url(img/slide1.jpg); }
@@ -67,12 +72,8 @@ body{
 #item4:checked ~ .slider .item4,
 #item5:checked ~ .slider .item5 {
     width: 100%;
-}
-
-.subscribe-container{
-    width: 70%;
-    height: 10%;
-    background-color: 292931;
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
 }
 
 .controls{
@@ -82,6 +83,33 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+}
+
+.subscribe-container{
+    width: 70%;
+    height: 10%;
+    background-color: 292931;
+}
+
+.subscribe{
+	width: 100%;
+    height: 0%;
+    color: #292931;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transition: transform ease-in-out .5s;
+    -webkit-transition: transform ease-in-out .5s;    
+}
+
+#item1:checked ~ .subscribe-container .sitem1,
+#item2:checked ~ .subscribe-container .sitem2,
+#item3:checked ~ .subscribe-container .sitem3,
+#item4:checked ~ .subscribe-container .sitem4,
+#item5:checked ~ .subscribe-container .sitem5 {
+    color: whitesmoke;
+    height: 100%;
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
 }
 
 .controls-container {
@@ -131,7 +159,7 @@ body{
 	background: inherit;
 }
 
-.controls-container .button:hover {
+.controls-container button:hover {
 	border: 0.125rem solid whitesmoke;
     background-color: whitesmoke;
 }
