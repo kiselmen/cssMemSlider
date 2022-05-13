@@ -28,7 +28,7 @@ body{
     max-width: 65rem;
     background-color: #292931;
 
-    padding: 4rem;
+    padding: 1.5rem;
     display: flex;
 
     flex-direction: row;
@@ -138,9 +138,14 @@ body{
     background-color: whitesmoke;
 }
 
+.controls-container label:active .button{
+    transform: scale(1.5);
+    transition: all ease-in-out .15s;
+    -webkit-transition: all ease-in-out .15s;
+}
+
 .controls-container .button {
 	display: block;
-    margin: auto;
 	height: 0.7rem;
 	width: 0.7rem;
 	border-radius: 50%;
@@ -160,6 +165,9 @@ body{
 }
 
 @media (max-width: 480px){
+    /* .container{
+        height: 50vh;
+    } */
     .slider-container{
         height: 60%;
         order: 0;
@@ -167,11 +175,10 @@ body{
     .controls-container{
         width: 100%;
         justify-content: center;
-        margin: 0 auto;
         order: 1;
     }
     .subscribe-container{
-        /* margin: 2rem 0 0 0; */
+        width: 100%;
         order: 2;
         width: 100%;
     }
