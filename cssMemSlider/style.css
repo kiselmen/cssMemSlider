@@ -165,9 +165,6 @@ body{
 }
 
 @media (max-width: 480px){
-    /* .container{
-        height: 50vh;
-    } */
     .slider-container{
         height: 60%;
         order: 0;
