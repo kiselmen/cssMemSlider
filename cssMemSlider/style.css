@@ -167,6 +167,9 @@ body{
 /* @media (max-width: ) */
 
 @media (max-width: 480px){
+    html {
+        font-size: 0.8rem;
+    }
     .container {
         width: 84vh;
         height: 100vh;
